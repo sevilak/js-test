@@ -1,21 +1,20 @@
-function aktuellesDatumUhrzeit() {
-    const jetzt = new Date();
-    const datum = jetzt.toLocaleDateString('de-DE'); // Datum im deutschen Format
-    const uhrzeit = jetzt.toLocaleTimeString('de-DE'); // Uhrzeit im deutschen Format
-    console.log(`Aktuelles Datum: ${datum}, Aktuelle Uhrzeit: ${uhrzeit}`);
-}
-
-// Funktion aufrufen, um Datum und Uhrzeit anzuzeigen
-aktuellesDatumUhrzeit();
-
 const taskInput = document.getElementById('taskInput');
 const addTaskButton = document.getElementById('addTaskButton');
 const taskList = document.getElementById('taskList');
 const message = document.getElementById('message');
 const emoji = document.getElementById('emoji');
 
-// Lade Aufgaben aus dem Local Storage
-document.addEventListener('DOMContentLoaded', loadTasks);
+// Lade Aufgaben aus dem Local Storage und frage nach dem Namen
+document.addEventListener('DOMContentLoaded', () => {
+    const userName = prompt("Wie heißt du?"); // Frage nach dem Namen
+    if (userName) {
+        alert(`Willkommen, ${userName}!`); // Begrüßungsnachricht
+    } else {
+        alert("Willkommen!"); // Standardbegüßung
+    }
+    loadTasks();
+}
+);
 
 // Füge eine neue Aufgabe hinzu
 addTaskButton.addEventListener('click', addTask);
