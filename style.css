@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(151, 131, 131, 0.733);
+    border-radius: 9px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+    /* font-family:  */
+    
+}
+
+input[type="text"] {
+    width: calc(100% - 110px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #422222;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+button:hover {
+    background-color: #503838;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #464444;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button.delete {
+    background-color: #130506;
+}
+
+button.delete:hover {
+    background-color: #6e0f19;
+}
+
+#message {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #d4edda;
+    color: #061108;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+}
+
+.hidden {
+    display: none;
+}
+
+#emoji {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    display: none; /* Zuerst unsichtbar */
+}
+
+#emoji img {
+    width: 100px; /* Größe des Emojis */
+    animation: pop 0.5s forwards;
+}
+
+@keyframes pop {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
