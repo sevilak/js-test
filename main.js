@@ -1,3 +1,13 @@
+function aktuellesDatumUhrzeit() {
+    const jetzt = new Date();
+    const datum = jetzt.toLocaleDateString('de-DE'); // Datum im deutschen Format
+    const uhrzeit = jetzt.toLocaleTimeString('de-DE'); // Uhrzeit im deutschen Format
+    console.log(`Aktuelles Datum: ${datum}, Aktuelle Uhrzeit: ${uhrzeit}`);
+}
+
+// Funktion aufrufen, um Datum und Uhrzeit anzuzeigen
+aktuellesDatumUhrzeit();
+
 const taskInput = document.getElementById('taskInput');
 const addTaskButton = document.getElementById('addTaskButton');
 const taskList = document.getElementById('taskList');
